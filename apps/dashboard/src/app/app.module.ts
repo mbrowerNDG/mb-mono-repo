@@ -9,6 +9,7 @@ import { MaterialModule } from '@workshop/material';
 import { HomeModule } from './home/home.module';
 import { CustomersModule } from './customers/customers.module';
 import { ProjectsModule } from './projects/projects.module';
+import { UiLoginModule } from '@workshop/ui-login';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,7 +20,8 @@ import { ProjectsModule } from './projects/projects.module';
     MaterialModule,
     HomeModule,
     ProjectsModule,
-    CustomersModule
+    CustomersModule,
+    UiLoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]
