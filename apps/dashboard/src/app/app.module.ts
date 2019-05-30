@@ -1,3 +1,4 @@
+import { AppRoutingModule } from './app.routing.module';
 import { HomeComponent } from './home/home.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -13,7 +14,7 @@ import { ProjectsModule } from './projects/projects.module';
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([], { initialNavigation: 'enabled' }),
+    AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
     HomeModule,
