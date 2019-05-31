@@ -19,7 +19,7 @@
 <mat-sidenav-container>
     <mat-sidenav #sidenav mode="side" close class="app-sidenav">
         <nav>
-            <a *ngFor="let link of links" mat-button class="nav-link" [href]="link.path">
+            <a *ngFor="let link of links" mat-button class="nav-link" active routerLinkActive="active" [routerLink]="link.path">
                 <mat-icon>
                     {{link.icon}}
                     <!-- LINK ICON -->
