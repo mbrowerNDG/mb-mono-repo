@@ -6,20 +6,22 @@ const BASE_URL = 'http://localhost:3000/';
 })
 export class ProjectsService {
  model = 'projects'
-  constructor(private httpClient: HttpClient) { }
+
+ constructor(private httpClient: HttpClient) { }
 
 getUrl()
 {
   return `${BASE_URL}${this.model}`;
 }
+getUrlForId(id){
+  return `${this.getUrl()}/${id}`;
+}
 all() {
 return this.httpClient.get(this.getUrl());
 }
-getUrlForId(id){
-  return `${this.getUrl()}/${id}`
-}
+
 create(project) {
-  return this.httpClient.post(this.getUrlForId(project.id), project);
+  return this.httpClient.post(this.getUrl(), project);
 }
 update(project) {
   return this.httpClient.patch(this.getUrlForId(project.id), project);
